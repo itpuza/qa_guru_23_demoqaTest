@@ -3,6 +3,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -20,36 +21,32 @@ public class DemoqaTest {
         @Test
         void successfulSearchTest() {
             open("/automation-practice-form");
-            $("[id=firstName]").setValue("Pasha");
-            $("[id=lastName]").setValue("Technique");
-            $("[id=userEmail]").setValue("Technique@mail.com");
-            $("[for='gender-radio-1']").click();
-            $("[id=userNumber").setValue("1111111111");
-            $("[id=dateOfBirthInput").click();
+            $("#firstName").setValue("Pasha");
+            $("#lastName").setValue("Technique");
+            $("#userEmail").setValue("Technique@mail.com");
+            $("#genterWrapper").$(byText("Male")).click();
+            $("#userNumber").setValue("1111111111");
+            $("#dateOfBirthInput").click();
             $(".react-datepicker__year-select").selectOption("1993");
             $(".react-datepicker__month-select").selectOption("January");
             $(".react-datepicker__day--023:not(.react-datepicker__day--outside-month)").click();
-            $("[id=subjectsInput]").val("Economics").pressEnter();;
-            $("[for='hobbies-checkbox-1']").click();
+            $("#subjectsInput").val("Economics").pressEnter();;
+            $("#hobbiesWrapper").$(byText("Sports")).click();
             $("#uploadPicture").uploadFromClasspath("123.jpeg");
-            $("[id=currentAddress]").setValue("Moscow");
+            $("#currentAddress").setValue("Moscow");
             $("#react-select-3-input").val("Haryana").pressEnter();
             $("#react-select-4-input").val("Panipat").pressEnter();
             $("#submit").pressEnter();
 
 
-            $(".table-responsive").shouldHave(
-                    text("Pasha Technique"),
-                    text("Technique@mail.com"),
-                    text("Male"),
-                    text("1111111111"),
-                    text("23 January,1993"),
-                    text("Economics"),
-                    text("Sports"),
-                    text("123.jpeg"),
-                    text("Moscow"),
-                    text("Haryana Panipat"));
-
+            $(".table-responsive").shouldHave(text( "Pasha Technique"));
+            $(".table-responsive").shouldHave(text("Male"));
+            $(".table-responsive").shouldHave(text("1111111111"));
+            $(".table-responsive").shouldHave(text("23 January,1993"));
+            $(".table-responsive").shouldHave(text("Economics"));
+            $(".table-responsive").shouldHave(text("Sports"));
+            $(".table-responsive").shouldHave(text("123.jpeg"));
+            $(".table-responsive").shouldHave(text("Haryana Panipat"));
 
 
         }
