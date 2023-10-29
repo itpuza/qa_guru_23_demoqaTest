@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DemoqaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-29T14:00:41" hostname="MacBook-Pro-Aleksej.local" time="3.921">
+  <properties/>
+  <testcase name="successfulSearchTest()" classname="DemoqaTest" time="3.921"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: /Users/puza/IdeaProjects/qa_guru_23_demoqaTest/build/downloads/1698588041165_14637_1
+[Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+[Test worker] INFO com.codeborne.selenide.webdriver.SelenideNettyClientFactory - Changed readTimeout from PT3M to PT1M30S
+окт. 29, 2023 5:00:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 118, so returning the closest version found: 117
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=118.0.5993.117 Platform=mac
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.19.1
+[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.13.0 build revision: ba948ece5b*
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on mac (2c3d2f80cc1ae757bc7be2ed8db49a7e)
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Register WebDriverInstance[config=StaticConfig,webDriver=ChromeDriver: chrome on mac (2c3d2f80cc1ae757bc7be2ed8db49a7e),proxy=null,downloadsFolder=/Users/puza/IdeaProjects/qa_guru_23_demoqaTest/build/downloads/1698588041165_14637_1] in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.drivercommands.DisposablesRegistry - Add shutdown hook in 1 [size=1]
+[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - Browser will stay open due to holdBrowserOpen=true: 1 -> ChromeDriver: chrome on mac (2c3d2f80cc1ae757bc7be2ed8db49a7e)
+]]></system-err>
+</testsuite>
