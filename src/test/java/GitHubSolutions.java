@@ -13,7 +13,6 @@ public class GitHubSolutions {
     }
 
     @Test
-
     void searchSolutions() {
         open("https://github.com/");
         $("li").sibling(0)
